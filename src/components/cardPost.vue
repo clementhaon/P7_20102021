@@ -1,0 +1,31 @@
+<template>
+  <div class="card">
+    <h2>{{ title }}</h2>
+    <p>{{ content }}</p>
+    <div>
+      <router-link :to="`/post/${id}`">
+        <img :src="image" />
+      </router-link>
+    </div>
+    <p class="commDe">Publié par {{ user.firstname }} {{ user.lastname }}</p>
+    <router-link :to="`/post/${id}`">Commentaires ...</router-link>
+  </div>
+</template>
+//----------------------------------------------------------------------------------------------------------------------
+<script>
+export default {
+  props: ["title", "content", "user", "id", "image"],
+};
+</script>
+<style scoped>
+.card {
+  border: 2px solid grey;
+  border-radius: 20px;
+  margin-bottom : 25px;
+  padding : 15px;
+  background-color: #E5E8E9;
+}
+img {
+  max-width: 250px;
+}
+</style>
