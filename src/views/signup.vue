@@ -11,7 +11,6 @@
         type="text"
         name="firstName"
         id="firstname-input"
-        placeholder="Charles"
       />
       <br>
       <label for="lastname">Nom :</label>
@@ -21,7 +20,6 @@
         type="text"
         name="lastName"
         id="lastname-input"
-        placeholder="Dupont"
       />
       <br>
       <label for="email">Email :</label>
@@ -31,7 +29,6 @@
         type="email"
         name="email"
         id="email-input"
-        placeholder="utilisateur@domaine.fr"
       />
       <br>
       <label for="password">Mot de passe :</label>
@@ -40,6 +37,8 @@
         v-model="password"
         type="password"
         name="password"
+        :maxlength="max"
+        placeholder="Entre 8 et 20 caractères"
         id="password-input"
       />
       <br>
@@ -67,6 +66,7 @@ export default {
       email: "",
       password: "",
       message: "",
+      max:"20",
     };
   },
   methods: {
