@@ -6,7 +6,7 @@
           <h1>Fil d'actualités</h1>
         </div>
       </div>
-      <h2><router-link to="/create">Créez un nouveau post</router-link></h2>
+      <h2 class="titre--create"><router-link to="/create">Créez un nouveau post</router-link></h2>
     </div>
     <div id="container">
       <div class="allpost">
@@ -36,5 +36,7 @@ export default {
 .tittleban {
   text-align: center;
 }
-
+.titre--create {
+  margin: 30px 0;
+}
 </style>

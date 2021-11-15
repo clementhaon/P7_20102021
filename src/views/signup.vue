@@ -4,43 +4,51 @@
     <h3>Merci de remplir le formulaire d'inscription</h3>
 
     <form class="signup" @submit.prevent="signup">
-      <label for="firstname">Prénom :</label>
-      <input
-        required
-        v-model="firstname"
-        type="text"
-        name="firstName"
-        id="firstname-input"
-      />
+      <div class="login--form">
+        <label class="label--email" for="firstname">Prénom :</label>
+        <input
+          required
+          v-model="firstname"
+          type="text"
+          name="firstName"
+          id="firstname-input"
+        />
+      </div>
       <br>
-      <label for="lastname">Nom :</label>
-      <input
-        required
-        v-model="lastname"
-        type="text"
-        name="lastName"
-        id="lastname-input"
-      />
+      <div class="login--form">
+        <label class="label--email" for="lastname">Nom :</label>
+        <input
+          required
+          v-model="lastname"
+          type="text"
+          name="lastName"
+          id="lastname-input"
+        />
+      </div>
       <br>
-      <label for="email">Email :</label>
-      <input
-        required
-        v-model="email"
-        type="email"
-        name="email"
-        id="email-input"
-      />
+      <div class="login--form">
+        <label class="label--email" for="email">Email :</label>
+        <input
+          required
+          v-model="email"
+          type="email"
+          name="email"
+          id="email-input"
+        />
+      </div>
       <br>
-      <label for="password">Mot de passe :</label>
-      <input
-        required
-        v-model="password"
-        type="password"
-        name="password"
-        :maxlength="max"
-        placeholder="Entre 8 et 20 caractères"
-        id="password-input"
-      />
+      <div class="login--form">
+        <label for="password">Mot de passe :</label>
+        <input
+          required
+          v-model="password"
+          type="password"
+          name="password"
+          :maxlength="max"
+          placeholder="Entre 8 et 20 caractères"
+          id="password-input"
+        />
+      </div>
       <br>
       <button type="submit" @click.prevent="buttonSignup">S'inscrire</button>
       <p v-if="message">{{ message }}</p>
@@ -48,7 +56,7 @@
 
     <div class="container_login">
       <p>
-        Vous avez déjà un compte? <router-link to="/login">login</router-link>.
+        Vous avez déjà un compte? <router-link to="/login">Se connecter</router-link>.
       </p>
     </div>
   </div>
@@ -81,7 +89,7 @@ export default {
       try {
         const res = await axios.post("/api/auth/signup", data);
         console.log(res);
-        this.$router.push("/login");
+        this.$router.push("/");
       } catch (error) {
         alert(error?.response?.data?.error || "Une erreur est survenue.");
       }
@@ -93,5 +101,12 @@ export default {
 input {
   margin-bottom: 20px;
   margin-left: 10px;
+}
+h2 {
+  margin: 50px 0;
+  text-align: center;
+}
+.container_signup button {
+  margin-bottom: 20px;
 }
 </style>

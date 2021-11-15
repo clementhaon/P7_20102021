@@ -4,24 +4,27 @@
     <h3>Connexion</h3>
     <div class="flex-co">
     <form class="login" @submit.prevent="login">
-      <label for="email">Email :</label>
-      <input
-        required
-        v-model="email"
-        type="email"
-        name="email"
-        id="email-input"
-        placeholder="utilisateur@domaine.fr"
-      />
+      <div class="login--form">
+        <label class="label--email" for="email">Email :</label>
+        <input
+          required
+          v-model="email"
+          type="email"
+          name="email"
+          id="email-input"
+        />
+      </div>
       <br>
-      <label for="password">Mot de passe :</label>
-      <input
-        required
-        v-model="password"
-        type="password"
-        name="password"
-        id="password-input"
-      />
+      <div class="login--form">
+        <label for="password">Mot de passe :</label>
+        <input
+          required
+          v-model="password"
+          type="password"
+          name="password"
+          id="password-input"
+        />
+      </div>
       <br>
       <button type="submit" @click.prevent="buttonLogin">Se connecter</button>
       <p v-if="message">{{ message }}</p>
@@ -31,7 +34,7 @@
     <div class="container_signup">
       <p>
         Vous n'avez pas de compte?
-        <router-link to="/signup">signup</router-link>.
+        <router-link to="/signup">S'incrire</router-link>.
       </p>
     </div>
   </div>
@@ -76,6 +79,7 @@ export default {
 <style scoped>
 h2{
   text-align: center;
+  margin: 50px 0;
 }
 .flex-co{
   display: flex;
@@ -85,5 +89,10 @@ input {
   margin-bottom: 20px;
   margin-left: 10px;
 }
-
+h3 {
+  margin: 40px 0;
+}
+.flex-co form button {
+  margin-bottom: 20px;
+}
 </style>

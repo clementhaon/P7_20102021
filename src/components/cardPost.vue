@@ -7,6 +7,7 @@
         <img :src="image" />
       </router-link>
     </div>
+    <hr />
     <p class="commDe">Publié par {{ user.firstname }} {{ user.lastname }}</p>
     <router-link :to="`/post/${id}`">Commentaires ...</router-link>
   </div>
@@ -23,9 +24,12 @@ export default {
   border-radius: 20px;
   margin-bottom : 25px;
   padding : 15px;
-  background-color: #E5E8E9;
+  background-color: #F2F3F3;
 }
 img {
   max-width: 250px;
+}
+hr {
+  margin: 0;
 }
 </style>

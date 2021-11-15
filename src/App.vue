@@ -47,6 +47,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding:0;
   height:100%;
+  background: linear-gradient(#EAF8FD, #EBFFFA);
 }
 button {
     font-family: 'Montserrat', sans-serif;
@@ -55,6 +56,9 @@ a {
     color: black;
     text-decoration: underline grey;
   }
+nav ul li:hover {
+  transform: scale(1.2);
+}
 #logo {
   width: 400px;
   max-width: 90%;
@@ -65,11 +69,11 @@ a {
   align-items: center;
   background-color: #44bb84;
   height: 100px;
-  opacity: 0.9;   
+  opacity: 0.7;   
 
 }
 #nav {
-  background-color: #C8C8C8;
+  background-color: #ECEDED;
   height: 100%;
   opacity: 0.9;   
 }
@@ -84,6 +88,8 @@ a {
 }
 li {
   list-style-type: none;
+  transition: all .3s ease-in-out;
+
 }
 .logout {
   cursor: pointer
@@ -94,7 +100,7 @@ li {
 .footer {
   background-color: #44bb84;
   width:100%;
-  opacity: 0.9;
+  opacity: 0.7;
   position: fixed;
   bottom: 0;
 }
@@ -132,10 +138,42 @@ button {
   border-radius:5px;
   border: 1px solid grey;
   height: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  animation: shake 0.42s ease-in;
+  transform: translate3d(0, 0, 0);
+  perspective: 100px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+  
+  30%, 50%, 70% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(1px, 0, 0);
+}
 }
 input {
   border-radius: 10px;
   border: 2px solid grey;
   min-height : 30px;
+}
+.login--form {
+  display: flex;
+  align-items: baseline;
+}
+.label--email {
+  display: block;
+  float: left;
+  width: 113px;
 }
 </style>
