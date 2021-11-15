@@ -23,7 +23,7 @@
           <p>
             {{ comment.comment }}
           </p>
-          <p class="commDe">
+          <p class="comlight">
             Publié par {{ comment.User.firstName }} {{ comment.User.lastName }}
           </p>
           <div v-if="comment.User.id === me || isAdmin">
@@ -140,5 +140,9 @@ export default {
 <style scoped>
 img {
   max-width: 250px;
+}
+.comlight {
+  opacity: 0.8;
+  font-size: 0.8rem;
 }
 </style>

@@ -8,8 +8,8 @@
       </router-link>
     </div>
     <hr />
-    <p class="commDe">Publié par {{ user.firstname }} {{ user.lastname }}</p>
-    <router-link :to="`/post/${id}`">Commentaires ...</router-link>
+    <p class="comlight">Publié par {{ user.firstname }} {{ user.lastname }}</p>
+    <router-link :to="`/post/${id}`">Commentaires</router-link>
   </div>
 </template>
 //----------------------------------------------------------------------------------------------------------------------
@@ -31,5 +31,8 @@ img {
 }
 hr {
   margin: 0;
+}
+.comlight {
+  opacity: 0.8;
 }
 </style>

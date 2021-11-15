@@ -7,7 +7,7 @@
         <input
           type="title"
           id="title"
-          placeholder="ici votre titre"
+          placeholder="Votre titre"
           v-model="title"
         />
       </div>
@@ -16,7 +16,7 @@
         <input
           type="text"
           id="content"
-          placeholder="Votre message..."
+          placeholder="Votre message"
           v-model="content"
         />
       </div>

@@ -1,4 +1,4 @@
-# frontend
+# frontend Groupomia
 
 ## Project setup
 ```
