@@ -15,8 +15,16 @@
       </ul>
     </nav>
     <router-view />
+    <div class="space"></div>
     <div class="footer">
-      
+        <nav>
+            <ul>
+                <li><router-link to="/twitter"><i class="fab fa-twitter-square"></i></router-link></li>
+                <li><router-link to="/facebook"><i class="fab fa-facebook-square"></i></router-link></li>
+                <li><router-link to="/instagram"><i class="fab fa-instagram"></i></router-link></li>
+                <li><router-link to="/pinterest"><i class="fab fa-pinterest-square"></i></router-link></li>
+            </ul>
+        </nav>
     </div>
   </div>
 </template>
@@ -40,6 +48,9 @@ body {
   padding:0;
   height:100%;
 }
+button {
+    font-family: 'Montserrat', sans-serif;
+}
 a {
     color: black;
     text-decoration: underline grey;
@@ -54,10 +65,13 @@ a {
   align-items: center;
   background-color: #44bb84;
   height: 100px;
+  opacity: 0.9;   
+
 }
 #nav {
   background-color: #C8C8C8;
   height: 100%;
+  opacity: 0.9;   
 }
 #nav ul {
   display: flex;
@@ -74,18 +88,45 @@ li {
 .logout {
   cursor: pointer
 }
+.space {
+  height: 80px;
+}
 .footer {
   background-color: #44bb84;
   width:100%;
-  height:100px;
+  opacity: 0.9;
+  position: fixed;
+  bottom: 0;
+}
+.footer nav {
+  height: 50px;
+}
+.footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.footer li {
+  font-size: 1.5rem;
+  opacity: 0.8;
 }
 .padding {
   padding: 0 100px 0 100px;
   margin-bottom : 30px;
 }
-
+@media screen and (max-width: 700px){
+  .padding {
+    padding: 10px;
+  }
+}
 .bold {
   font-weight: bold;
+}
+.shadow {
+  box-shadow: 0 0 20px 1px grey;
 }
 button {
   border-radius:5px;
@@ -96,6 +137,5 @@ input {
   border-radius: 10px;
   border: 2px solid grey;
   min-height : 30px;
-
 }
 </style>

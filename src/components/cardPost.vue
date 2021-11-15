@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card shadow">
     <h2>{{ title }}</h2>
     <p>{{ content }}</p>
     <div>

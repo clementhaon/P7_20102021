@@ -37,6 +37,22 @@ const routes = [
     name: "404",
     component: () => import("../views/404.vue"),
   },
+  {
+    path: '/twitter',
+    beforeEnter() {location.href = 'http://twitter.com'}
+  },
+  {
+    path: '/facebook',
+    beforeEnter() {location.href = 'http://facebook.com'}
+  },
+  {
+    path: '/pinterest',
+    beforeEnter() {location.href = 'http://pinterest.com'}
+  },
+  {
+    path: '/instagram',
+    beforeEnter() {location.href = 'http://instagram.com'}
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
