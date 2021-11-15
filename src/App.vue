@@ -80,9 +80,10 @@ li {
   height:100px;
 }
 .padding {
-  padding: 0 50px 0 50px;
+  padding: 0 100px 0 100px;
   margin-bottom : 30px;
 }
+
 .bold {
   font-weight: bold;
 }
